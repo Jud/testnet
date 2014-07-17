@@ -15,14 +15,15 @@ WORKDIR /home/bitcoin
 RUN mkdir -p /.bitcoin
 ADD bitcoin.conf /.bitcoin/bitcoin.conf
 
-# Chown it
-RUN chown -R bitcoin:bitcoin /.bitcoin/
-
 # Keep the data directory around
 VOLUME ["/.bitcoin"]
 
+# Chown it
+RUN chown -R bitcoin:bitcoin /.bitcoin/
+
 # Use our bitcoin user
-USER bitcoin
+# Gotta figure out volumes-from
+# USER bitcoin
 
 # Expose the testnet and mainnet ports
 EXPOSE 18332 18333 8332 8333
