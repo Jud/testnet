@@ -15,6 +15,8 @@ Let the node sync and you are ready to go.
 ### Credentials and things
 The testnet node listens on 18882 (RPC) and 18883 (P2P).
 
+```
 RPC Credentials:
 - user: bitcoin
 - pass: 12345
+```
